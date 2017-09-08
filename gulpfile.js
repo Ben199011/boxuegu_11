@@ -82,7 +82,7 @@ gulp.task('build', function() {
     gulp.run(['html', 'less', 'jsLib', 'js']);
 });
 //监听文件变化，自动打包
-gulp.task('defalut', function() {
+gulp.task('default', function() {
     gulp.run('build')
     gulp.watch(['src/**/*.html', 'index.html'], function() {
         gulp.run('html')
