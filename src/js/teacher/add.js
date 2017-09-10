@@ -1,3 +1,5 @@
+require("../common/header");
+require("../common/aside");
 $("#add-form").ajaxForm({
     success: function(data) {
         if (data.code == 200) {
