@@ -9,9 +9,16 @@ var concat = require('gulp-concat');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer')
+var htmlReplace = require('gulp-html-replace')
     //html处理
 gulp.task('html', function() {
     gulp.src(['src/**/*.html', 'index.html'])
+        //公共部分
+        .pipe(htmlReplace({
+            style: gulp.src('src/html/common/style.html'),
+            aside: gulp.src('src/html/common/aside.html'),
+            header: gulp.src('src/html/common/header.html')
+        }))
         .pipe(htmlmin({
             collapseWhitespace: true, //压缩页面空格
             minifyCSS: true, //压缩页面CSS

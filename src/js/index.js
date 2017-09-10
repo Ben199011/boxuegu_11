@@ -1,1 +1,2 @@
-require("./common/header")
+require("./common/header");
+require("./common/aside")

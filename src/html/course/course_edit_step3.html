@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
-    <link rel="stylesheet" href="../../lib/jquery-bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="../../less/index.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/art-template/lib/template-web.js">
+    <link rel="stylesheet" href="/dist/css/index.css">
 </head>
+
 <body>
     <!-- 侧边栏 -->
     <div class="aside">
@@ -30,7 +32,7 @@
                 <li>
                     <a href="../teacher/list.html">
                         <i class="fa fa-bell"></i>
-                        <span>讲师管理</span>		
+                        <span>讲师管理</span>
                     </a>
                 </li>
                 <li>
@@ -80,18 +82,16 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="../home/profile.html">
-                                <i class="fa fa-user"></i>
-                                个人中心
+                                <i class="fa fa-user"></i> 个人中心
                             </a>
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <i class="fa fa-sign-out"></i>
-                                退出
+                                <i class="fa fa-sign-out"></i> 退出
                             </a>
                         </li>
                     </ul>
-                </nav>          
+                </nav>
             </div>
             <div class="body course-add">
                 <!-- 面包屑 -->
@@ -115,20 +115,17 @@
                     <ul class="forwards list-unstyled">
                         <li>
                             <a href="./course_edit_step1.html" class="done">
-                            <b class="fa fa-check"></b>
-                            基本信息
+                                <b class="fa fa-check"></b> 基本信息
                             </a>
                         </li>
                         <li>
                             <a href="./course_edit_step2.html" class="done">
-                            <b class="fa fa-check"></b>
-                            课程图片
+                                <b class="fa fa-check"></b> 课程图片
                             </a>
                         </li>
                         <li>
                             <a href="./course_edit_step3.html" class="active">
-                            <b>3</b>
-                            课时管理
+                                <b>3</b> 课时管理
                             </a>
                         </li>
                     </ul>
@@ -237,19 +234,16 @@
                         <div class="form-group form-inline">
                             <label for="" class="col-xs-2 control-label">时长</label>
                             <div class="col-xs-8">
-                                <input type="text" class="form-control input-sm small">
-                                分
-                                <input type="text" class="form-control input-sm small">
-                                秒
-                                 <p class="help-block">时长必须为整数。</p>
+                                <input type="text" class="form-control input-sm small"> 分
+                                <input type="text" class="form-control input-sm small"> 秒
+                                <p class="help-block">时长必须为整数。</p>
                             </div>
                         </div>
                         <div class="form-group form-inline">
                             <label for="" class="col-xs-2 control-label">建议学习时长</label>
                             <div class="col-xs-8">
-                                <input type="text" class="form-control input-sm small">
-                                小时
-                                 <p class="help-block">（如未设置，则默认学习时长为视频时长3倍取整。）</p>
+                                <input type="text" class="form-control input-sm small"> 小时
+                                <p class="help-block">（如未设置，则默认学习时长为视频时长3倍取整。）</p>
                             </div>
                         </div>
                     </form>
@@ -262,8 +256,10 @@
         </div>
     </div>
 
-    <script src="../../lib/jquery/jquery.min.js"></script>
-    <script src="../../lib/jquery-bootstrap/js/bootstrap.min.js"></script>
-	<script src="../../js/common.js"></script>
+    <!--第三方包-->
+    <script src="/dist/js/lib.js"></script>
+    <!--公共文件-->
+    <script src="/src/js/common/common.js"></script>
 </body>
+
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
-    <link rel="stylesheet" href="../../lib/jquery-bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="../../less/index.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/art-template/lib/template-web.js">
+    <link rel="stylesheet" href="/dist/css/index.css">
 </head>
+
 <body>
     <!-- 侧边栏 -->
     <div class="aside">
@@ -80,14 +82,12 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="../home/settings.html">
-                                <i class="fa fa-user"></i>
-                                个人中心
+                                <i class="fa fa-user"></i> 个人中心
                             </a>
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <i class="fa fa-sign-out"></i>
-                                退出
+                                <i class="fa fa-sign-out"></i> 退出
                             </a>
                         </li>
                     </ul>
@@ -100,29 +100,29 @@
                     <li class="active">讲师添加</li>
                 </ol>
                 <div class="teacher-add">
-                    <form action="" class="form-horizontal col-xs-offset-2">
+                    <form id="add-form" action="/v6/teacher/add" method="post" class="form-horizontal col-xs-offset-2">
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">姓名</label>
                             <div class="col-xs-4">
-                                <input name="" type="text" class="form-control input-sm" placeholder="讲师名称">
+                                <input name="tc_name" type="text" class="form-control input-sm" placeholder="讲师名称">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">密码</label>
                             <div class="col-xs-4">
-                                <input name="" type="password" class="form-control input-sm">
+                                <input name="tc_pass" type="password" class="form-control input-sm">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">入职时间</label>
                             <div class="col-xs-4">
-                                <input name="" type="text" class="form-control input-sm">
+                                <input name="tc_join_date" type="text" class="form-control input-sm">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">类型</label>
                             <div class="col-xs-2">
-                                <select name="" class="form-control input-sm">
+                                <select name="tc_type" class="form-control input-sm">
                                     <option value="">讲师</option>
                                     <option value="">管理员</option>
                                 </select>
@@ -132,10 +132,10 @@
                             <label for="" class="col-xs-3 control-label">性别</label>
                             <div class="col-xs-4">
                                 <label class="radio-inline">
-                                    <input name="" value="" type="radio" checked> 男
+                                    <input name="tc_gender" value="" type="radio" checked> 男
                                 </label>
                                 <label class="radio-inline">
-                                    <input name="" value="" type="radio"> 女
+                                    <input name="tc_gender" value="" type="radio"> 女
                                 </label>
                             </div>
                         </div>
@@ -150,7 +150,9 @@
         </div>
     </div>
 
-    <script src="../../lib/jquery/jquery.min.js"></script>
-	<script src="../../js/common.js"></script>
+    <script src="/dist/js/lib.js"></script>
+    <script src="/src/js/common/common.js"></script>
+    <script src="/dist/js/teacher/add.js"></script>
 </body>
+
 </html>
