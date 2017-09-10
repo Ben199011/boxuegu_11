@@ -8,4 +8,4 @@ $(".navs a").on('click', function() {
 
 var path = location.pathname;
 $('.navs a').removeClass('active')
-$('.navs a[href="' + path + '"]').addClass("active").parent("ul").show()
+$('.navs a[href="' + path + '"]').addClass("active").parents("ul").show()
