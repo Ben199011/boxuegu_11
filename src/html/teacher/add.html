@@ -25,7 +25,7 @@
                     <li class="active">讲师添加</li>
                 </ol>
                 <div class="teacher-add">
-                    <form id="add-form" action="/v6/teacher/add" method="post" class="form-horizontal col-xs-offset-2">
+                    <form id="teacher-add-form" action="/v6/teacher/add" method="post" class="form-horizontal col-xs-offset-2">
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">姓名</label>
                             <div class="col-xs-4">
@@ -48,8 +48,8 @@
                             <label for="" class="col-xs-3 control-label">类型</label>
                             <div class="col-xs-2">
                                 <select name="tc_type" class="form-control input-sm">
-                                    <option value="">讲师</option>
-                                    <option value="">管理员</option>
+                                    <option value="0">讲师</option>
+                                    <option value="1">管理员</option>
                                 </select>
                             </div>
                         </div>

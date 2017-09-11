@@ -1,6 +1,6 @@
 require("../common/header");
 require("../common/aside");
-$("#add-form").ajaxForm({
+$("#teacher-add-form").ajaxForm({
     success: function(data) {
         if (data.code == 200) {
             alert("添加成功");
