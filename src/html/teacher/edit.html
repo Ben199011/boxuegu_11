@@ -31,9 +31,9 @@
         </div>
     </div>
     <!--讲师编辑模板-->
-    <script id="teacher-edit-form" type="text/template">
-        <form action="" class="form-horizontal col-xs-offset-2">
-            <input type="hidden" name="{{tc_id}}" value="{{tc_id}}">
+    <script id="teacher-edit-tpl" type="text/template">
+        <form id="teacher-edit-form" action="/v6/teacher/update" method="post" class="form-horizontal col-xs-offset-2">
+            <input type="hidden" name="tc_id" value="{{tc_id}}">
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">姓名</label>
                 <div class="col-xs-4">
