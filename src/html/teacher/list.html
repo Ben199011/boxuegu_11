@@ -122,7 +122,7 @@
                 <td>{{teacher.tc_cellphone}}</td>
                 <td>
                     <a data-id="{{teacher.tc_id}}" href="#teacherModal" data-toggle="modal" data-target="#teacherModal" class="btn btn-info btn-xs btn-teacher-watch">查 看</a>
-                    <a href="/dist/html/teacher/edit.html" class="btn btn-info btn-xs">编 辑</a>
+                    <a href="/dist/html/teacher/edit.html?tc_id={{teacher.tc_id}}" class="btn btn-info btn-xs">编 辑</a>
                     <!--把状态和ID存在a标签中-->
                     <a data-id="{{teacher.tc_id}}" data-status="{{teacher.tc_status}}" href="javascript:;" class="btn btn-warning btn-xs btn-teacher-list">{{teacher.tc_status==0?'注销':'启用'}}</a>
                 </td>
