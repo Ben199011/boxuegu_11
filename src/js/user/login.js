@@ -1,4 +1,6 @@
-//添加图片
+require("../common/common")
+require('../common/loading')
+    //添加图片
 var userInfo = JSON.parse(localStorage.getItem("userInfo")) || {};
 var tc_avatar = userInfo.tc_avatar || "/public/img/default.png";
 $(".avatar img").attr('src', tc_avatar)

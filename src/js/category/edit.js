@@ -1,5 +1,7 @@
 require("../common/header")
 require("../common/aside")
+require("../common/common");
+require('../common/loading');
 var util = require("../common/util");
 var cg_id = util.getSearch("cg_id");
 //回显

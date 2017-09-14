@@ -1,5 +1,7 @@
 require("../common/header")
 require("../common/aside")
+require("../common/common");
+require('../common/loading')
 $("#repass-form").on("submit", function() {
     //表单验证
     if ($("#input-pass").val() !== $("#input-pass-reset").val()) {

@@ -1,5 +1,7 @@
 require("../common/header");
 require("../common/aside");
+require("../common/common");
+require('../common/loading');
 //用插件做要把a标签改为button标签，type改为submit
 $("#course-add-form").ajaxForm(function(data) {
         if (data.code == 200) {

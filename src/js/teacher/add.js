@@ -1,5 +1,7 @@
 require("../common/header");
 require("../common/aside");
+require("../common/common");
+require('../common/loading');
 $("#teacher-add-form").ajaxForm({
     success: function(data) {
         if (data.code == 200) {

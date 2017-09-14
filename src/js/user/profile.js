@@ -1,5 +1,7 @@
 require("../common/header")
 require("../common/aside")
+require("../common/common")
+require('../common/loading')
     //个人中心资料回显
 $.ajax({
         url: "/v6/teacher/profile",

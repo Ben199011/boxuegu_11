@@ -1,6 +1,8 @@
 require("../common/header")
 require("../common/aside")
 var util = require("../common/util");
+require("../common/common");
+require('../common/loading');
 var cs_id = util.getSearch('cs_id');
 //数据回显
 $.get("/v6/course/picture", { cs_id: cs_id }, function(data) {

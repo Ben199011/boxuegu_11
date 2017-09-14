@@ -1,5 +1,7 @@
 require("../common/header");
 require("../common/aside");
+require("../common/common");
+require('../common/loading');
 //列表页面渲染
 $.get("/v6/teacher", function(data) {
         $(".table-striped").append(template("teacher-list-tpl", data.result))

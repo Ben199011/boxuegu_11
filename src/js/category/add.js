@@ -1,6 +1,8 @@
 require("../common/header")
-require("../common/aside")
-    // 动态创建模板
+require("../common/aside");
+require("../common/common");
+require('../common/loading');
+// 动态创建模板
 $.get("/v6/category/top", function(data) {
         $("#select-add-tpl").html(template("category-top-tpl", data.result))
     })

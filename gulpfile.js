@@ -36,7 +36,9 @@ gulp.task('less', function() {
         .pipe(cleanCss())
         .pipe(gulp.dest('dist/css'));
 });
-var jsLibs = ['node_modules/art-template/lib/template-web.js', 'node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/jquery-form/dist/jquery.form.min.js']
+var jsLibs = ['node_modules/art-template/lib/template-web.js', 'node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/jquery-form/dist/jquery.form.min.js', 'node_modules/jquery.cookie/jquery.cookie.js',
+        'node_modules/nprogress/nprogress.js'
+    ]
     //第三方包合并压缩
 gulp.task('jsLib', function() {
         gulp.src(jsLibs)

@@ -1,6 +1,8 @@
 require("../common/header")
 require("../common/aside");
-var util = require('../common/util')
+var util = require('../common/util');
+require("../common/common");
+require('../common/loading')
 var cs_id = util.getSearch("cs_id");
 //数据回显
 $.get("/v6/course/basic", { "cs_id": cs_id }, function(data) {
@@ -19,8 +21,9 @@ $(document).on("change", "#sel-cgTop", function() {
                 for (var i = 0; i < data.result.length; i++) {
                     html += '<option value="' + data.result[i].cg_id + '">' + data.result[i].cg_name + '</option>'
                 }
-                $("#sel-cgChild").html(html);
+
             }
+            $("#sel-cgChild").html(html);
         })
     })
     //数据提交
