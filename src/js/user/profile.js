@@ -9,20 +9,36 @@ $.ajax({
         success: function(data) {
             if (data.code == 200) {
                 $(".teacher-profile").html(
-                    template("teacher-profile-tmp", data.result))
+                    template("teacher-profile-tmp", data.result));
+                initPlugin()
             }
         }
     })
     //页面的动态异步生成的，
 $("#user-profile-form").ajaxForm({
-    delegation: true,
-    success: function(data) {
-        if (data.code == 200) {
-            alert("保存成功")
-            window.location.Reload()
+        delegation: true,
+        success: function(data) {
+            if (data.code == 200) {
+                alert("保存成功")
+                window.location.Reload()
+            }
+        },
+        error: function() {
+            alert("保存失败")
         }
-    },
-    error: function() {
-        alert("保存失败")
-    }
-})
+    })
+    //使用日期插件
+function initPlugin() {
+    $('input[name="tc_birthday"]').datepicker({
+        language: 'zh-CN',
+        format: 'yyyy-mm-dd',
+        endDate: new Date('2010-01-01'),
+        autoclose: true
+    });
+    $('input[name="tc_join_date"]').datepicker({
+        language: 'zh-CN',
+        format: 'yyyy-mm-dd',
+        endDate: new Date('2017-01-01'),
+        autoclose: true
+    });
+}
