@@ -27,6 +27,12 @@ $(document).on("click", ".btn-lesson-edit", function() {
     //编辑和添加数据的提交
 $("#lesson-form").ajaxForm({
     delegation: true,
+    beforeSubmit: function(arrData, $form, options) {
+        arrData.push({
+            name: 'ct_is_free',
+            value: $('#ct_is_free').prop('checked') ? 1 : 0
+        })
+    },
     success: function(data) {
         if (data.code == 200) {
             if (data.result) {
@@ -58,6 +64,7 @@ function uplessons(ct_id) {
         var index = getLessonsIndex(formData.ct_id)
         lessons.splice(index, 1, lessonsData)
     }
+    $("#lesson-list").html(template("lesson-list-tpl", lessons))
 }
 
 function getFormData() {
