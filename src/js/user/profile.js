@@ -20,7 +20,6 @@ $("#user-profile-form").ajaxForm({
         success: function(data) {
             if (data.code == 200) {
                 alert("保存成功")
-                window.location.Reload()
             }
         },
         error: function() {
@@ -41,11 +40,20 @@ function initPlugin() {
         endDate: new Date('2017-01-01'),
         autoclose: true
     });
-    //上传图片
-    // $('#uploadify').uploadify({
-    //     swf: '/lib/jquery-uploadify/uploadify.swf',
-    //     uploader: '/v6/uploader/avatar',
-    //     fileTypeExts: '*.gif; *.jpg; *.png',
-    //     fileObjName: 'tc_avatar'
-    // });
+    //省市县三级联动
+    $('#region-container').region({
+        url: '/lib/jquery-region/region.json'
+    });
+    //富文本编辑器
+    window.edit = CKEDITOR.replace("introduce", {
+            width: 600,
+            skin: 'moono-lisa'
+        })
+        //上传图片
+        // $('#uploadify').uploadify({
+        //     swf: '/lib/jquery-uploadify/uploadify.swf',
+        //     uploader: '/v6/uploader/avatar',
+        //     fileTypeExts: '*.gif; *.jpg; *.png',
+        //     fileObjName: 'tc_avatar'
+        // });
 }
