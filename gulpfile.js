@@ -37,7 +37,10 @@ gulp.task('less', function() {
         .pipe(gulp.dest('dist/css'));
 });
 var jsLibs = ['node_modules/art-template/lib/template-web.js', 'node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/jquery-form/dist/jquery.form.min.js', 'node_modules/jquery.cookie/jquery.cookie.js',
-        'node_modules/nprogress/nprogress.js', 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 'node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js'
+        'node_modules/nprogress/nprogress.js', 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 'node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js',
+        'lib/jquery-uploadify/jquery.uploadify.min.js',
+        'lib/jquery-jcrop/js/Jcrop.min.js',
+        'lib/jquery-region/jquery.region.js'
     ]
     //第三方包合并压缩
 gulp.task('jsLib', function() {

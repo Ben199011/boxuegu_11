@@ -41,4 +41,11 @@ function initPlugin() {
         endDate: new Date('2017-01-01'),
         autoclose: true
     });
+    //上传图片
+    // $('#uploadify').uploadify({
+    //     swf: '/lib/jquery-uploadify/uploadify.swf',
+    //     uploader: '/v6/uploader/avatar',
+    //     fileTypeExts: '*.gif; *.jpg; *.png',
+    //     fileObjName: 'tc_avatar'
+    // });
 }
