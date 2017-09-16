@@ -50,10 +50,18 @@ function initPlugin() {
             skin: 'moono-lisa'
         })
         //上传图片
-        // $('#uploadify').uploadify({
-        //     swf: '/lib/jquery-uploadify/uploadify.swf',
-        //     uploader: '/v6/uploader/avatar',
-        //     fileTypeExts: '*.gif; *.jpg; *.png',
-        //     fileObjName: 'tc_avatar'
-        // });
+    $('#uploadify').uploadify({
+        swf: '/lib/jquery-uploadify/uploadify.swf',
+        uploader: '/v6/uploader/avatar',
+        fileTypeExts: '*.gif; *.jpg; *.png',
+        fileObjName: 'tc_avatar',
+        buttonText: '上传',
+        onUploadSuccess: function(file, dataStr) { // 图片上传成功后的回调
+            var data = JSON.parse(dataStr);
+            console.log(123);
+            console.log(data)
+            $('.preview img').attr('src', data.result.path);
+        }
+
+    });
 }
